@@ -33,6 +33,6 @@ public class Creat2DArray {
         }
     }
     printArray(ar);
-   /////////////
+   
    }
 }
