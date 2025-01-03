@@ -16,6 +16,7 @@ public class ShortestPath {
                 x-=1;
             }
         }
+        
         double s= Math.sqrt(Math.pow((y-0),2)+Math.pow((x-0),2));
         System.out.println(s);
     }
