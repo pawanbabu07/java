@@ -13,11 +13,11 @@ public class Selection {
             ar[i]=tamp;
         }
         for(int i=0; i<ar.length; i++){ 
-            System.out.print(ar[i]);
+            System.out.print(ar[i]+" ");
         }
     }
     public static void main(String[] args){
-        int ar[]={7,3,1,8,5};
+        int ar[]={9,4,7,3,1,8,2,5};
         Select(ar);
     }  
 }

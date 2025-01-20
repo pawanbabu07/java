@@ -11,11 +11,11 @@ public class Insertion {
             ar[p+1]=c;
         }
         for(int i=0; i<ar.length; i++){
-            System.out.print(ar[i]);
+            System.out.print(ar[i]+" ");
         }
     }
     public static void main(String[] args){
-        int ar[]={1,5,8,2,7,3};
+        int ar[]={1,5,8,4,2,7,3,6};
         Insst(ar);
     }
     
