@@ -17,7 +17,7 @@ public class Selection {
         }
     }
     public static void main(String[] args){
-        int ar[]={9,4,7,3,1,8,2,5};
+        int ar[]={9,4,7,3,1,8,6,2,5};
         Select(ar);
     }  
 }
