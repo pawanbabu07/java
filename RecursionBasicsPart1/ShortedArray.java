@@ -2,7 +2,7 @@ package RecursionBasicsPart1;
 
 public class ShortedArray {
     public static boolean ShortedArray(int ar[], int i){
-       if(ar[i]==ar.length-1){
+       if(i==ar.length-1){
         return true;
        }
         if(ar[i]>ar[i+1]){

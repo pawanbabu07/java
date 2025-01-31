@@ -1,7 +1,7 @@
 package RecursionBasicsPart1;
-public class FirstOccurrenc{
+public class FirstAndLastOccurrenc{
     public static int FirstIndex(int ar[],int i, int n){
-        if(ar[i]==ar.length){
+        if(i==ar.length){
             return -1;
         }
         if(ar[i]==n){
