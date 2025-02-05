@@ -1,5 +1,9 @@
 package DividAndComquer;
-
+/*
+ NOTE:-
+ Worst case occurs when pivot is always the 
+ smallest or the largest element.
+ */
 public class QuickSort {
     public static void printarray(int arr[]){
         for(int i=0;i<arr.length;i++){
