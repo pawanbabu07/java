@@ -14,6 +14,8 @@ public class BasicArrayLists {
         list.add(6);
         list.add(7);
         list.add(8);
+        list.add(9);
+        list.add(10);
         System.out.println(list);
 
         //add element at index in arraylist
