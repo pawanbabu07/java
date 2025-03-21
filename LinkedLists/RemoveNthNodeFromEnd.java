@@ -34,6 +34,26 @@ class List{
         }
         System.out.println("null");
     }
+    void removeNthNode(int n){
+        int size=0;
+        Node temp = head;
+        while(temp != null){
+            temp =temp.next;
+            size++;
+        }
+        if(n==size){
+            head=head.next;
+            return;
+        }
+        int i=1;
+        int iToFind =size-n;
+        Node prev =head;
+        while(i<iToFind){
+            prev =prev.next;
+            i++;
+        }
+        prev.next=prev.next.next;
+    }
 }
 
 public class RemoveNthNodeFromEnd {
@@ -44,6 +64,8 @@ public class RemoveNthNodeFromEnd {
         ll.addF(3);
         ll.addF(2);
         ll.addF(1);
+        ll.print();
+        ll.removeNthNode(3);
         ll.print();
     }
 }
