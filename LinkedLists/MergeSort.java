@@ -66,7 +66,7 @@ class list{
         return meargedLL.next;
     }
     Node mergeSort(Node head){
-        if(head==null || head.next !=null){
+        if(head==null || head.next ==null){
             return head;
         }
         //find mid
