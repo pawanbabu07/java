@@ -1,5 +1,6 @@
 package LinkedLists;
-class list{
+
+public class MergeSort {
     class Node{
         int data;
         Node next;
@@ -25,7 +26,7 @@ class list{
         }
         Node temp = head;
         while(temp != null){
-            System.out.println(temp.data+" ");
+            System.out.print(temp.data+" ");
             temp = temp.next;
         }
         System.out.println("null");
@@ -79,16 +80,14 @@ class list{
         //merge
         return merge(newLeft, newRight);
     }
-}
-public class MergeSort {
     public static void main(String[] args) {
-        list ll=new list();
+        MergeSort ll=new MergeSort();
         ll.addFirst(1);
         ll.addFirst(2);
         ll.addFirst(3);
         ll.addFirst(4);
         ll.addFirst(5);
-        System.out.println(ll);
+        ll.print();
         ll.head= ll.mergeSort(ll.head);
         ll.print();
     }
