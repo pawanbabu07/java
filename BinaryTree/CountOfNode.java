@@ -1,6 +1,6 @@
-package BinTree;
 
-public class HeightOfATree {
+
+public class CountOfNode {
     static class Node{
         int data;
         Node left, right;
@@ -10,20 +10,19 @@ public class HeightOfATree {
             this.right = null;
             this.left = null;
         }
- 
     }
-    public static int height(Node root){
-            if(root == null){
-                return 0;
-            }
-
-            int lh = height(root.left);
-            int rh = height(root.right);
-            return Math.max(rh, lh)+1;
+    
+    public static int count(Node root){
+        if(root==null){
+            return 0;
         }
-
+        int leftCount=count(root.left);
+        int rightCournt=count(root.right);
+        return (leftCount+rightCournt)+1;
+    }
+ 
     public static void main(String[] args) {
-        /*
+         /*
                      1
                     / \
                    /   \
@@ -42,6 +41,7 @@ public class HeightOfATree {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
     
-        System.out.println(height(root));
+        System.out.println(count(root));
     }
+
 }

@@ -1,7 +1,8 @@
 package BinTree;
 
-public class HeightOfATree {
-    static class Node{
+public class SumOfNode{
+
+     static class Node{
         int data;
         Node left, right;
 
@@ -12,18 +13,18 @@ public class HeightOfATree {
         }
  
     }
-    public static int height(Node root){
-            if(root == null){
-                return 0;
-            }
 
-            int lh = height(root.left);
-            int rh = height(root.right);
-            return Math.max(rh, lh)+1;
+    public static int sum(Node root){
+        if(root==null){
+            return 0;
         }
+        int leftSum=sum(root.left);
+        int rightSum=sum(root.right);
+        return (leftSum+rightSum+root.data);
+    }
 
-    public static void main(String[] args) {
-        /*
+    public static void main(String[] args){
+         /*
                      1
                     / \
                    /   \
@@ -42,6 +43,6 @@ public class HeightOfATree {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
     
-        System.out.println(height(root));
+        System.out.println(sum(root));
     }
 }
