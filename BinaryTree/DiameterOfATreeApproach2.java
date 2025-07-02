@@ -1,6 +1,4 @@
-package BinTree;
-
-public class HeightOfATree {
+public class DiameterOfATreeApproach2 {
     static class Node{
         int data;
         Node left, right;
@@ -12,14 +10,27 @@ public class HeightOfATree {
         } 
  
     }
-    public static int height(Node root){
-        if(root == null){
-            return 0;
-        }
 
-        int lh = height(root.left);
-        int rh = height(root.right);
-        return Math.max(rh, lh)+1;
+    static class Info{
+        int dim;
+        int hei;
+        public Info(int dim , int hei){
+            this.dim=dim;
+            this.hei=hei;
+        }
+    }
+
+    public static Info diameter(Node root){
+
+        if(root==null){
+            return new Info(0,0);
+        }
+        Info leftInfo= diameter(root.left);
+        Info rightInfo= diameter(root.right);
+
+        int dim = Math.max(Math.max(leftInfo.dim, rightInfo.dim), leftInfo.hei + rightInfo.hei + 1);
+        int hei = Math.max(leftInfo.hei, rightInfo.hei) +1;
+        return new Info(dim, hei);
     }
 
     public static void main(String[] args) {
@@ -41,7 +52,8 @@ public class HeightOfATree {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
+        root.left.left.right = new Node(7);
     
-        System.out.println(height(root));
+        System.out.println(diameter(root).dim);
     }
 }

@@ -1,7 +1,5 @@
-package BinTree;
-
-public class HeightOfATree {
-    static class Node{
+public class DimaterOfATreeApproach1 {
+     static class Node{
         int data;
         Node left, right;
 
@@ -20,6 +18,19 @@ public class HeightOfATree {
         int lh = height(root.left);
         int rh = height(root.right);
         return Math.max(rh, lh)+1;
+    }
+    public static int dimater(Node root){
+        if(root==null){
+            return 0;
+        }
+
+        int leftDimeter=dimater(root.left);
+        int leftHeight= height(root.left);
+        int rightDimeter= dimater(root.right);
+        int rightHeight = height(root.right);
+        int selfDimeter= leftHeight + rightHeight + 1;
+
+        return Math.max(leftDimeter, Math.max(rightDimeter, selfDimeter));
     }
 
     public static void main(String[] args) {
@@ -41,7 +52,8 @@ public class HeightOfATree {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
+        root.left.left.right = new Node(7);
     
-        System.out.println(height(root));
+        System.out.println(dimater(root));
     }
 }
