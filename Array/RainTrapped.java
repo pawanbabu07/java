@@ -12,12 +12,12 @@ public class RainTrapped{
         int rightMax[]=new int[n];
         rightMax[n-1]=number[n-1];
         for(int i=n-2;i>=0;i--){
-            rightMax[i]=Math.max(number[i], rightMax[i]);
+            rightMax[i]=Math.max(number[i], rightMax[i+1]);
         }
         int trappedWater=0;
         for(int i=0; i<n;i++){
             int waterLevel=Math.min(leftMax[i], rightMax[i]);
-            trappedWater=waterLevel-number[i];    
+            trappedWater+=waterLevel-number[i];    
         }
         return trappedWater;
     }
