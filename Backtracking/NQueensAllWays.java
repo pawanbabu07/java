@@ -75,7 +75,7 @@ public class NQueensAllWays {
             }
             System.out.println();
         }
-        if(nQueenOne(board, 0));
+        if(nQueenOne(board, 0))
         nQueen(board,0);
         System.out.println("No. of solution: "+count);
     }
