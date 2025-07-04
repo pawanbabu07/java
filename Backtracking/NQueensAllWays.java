@@ -34,7 +34,6 @@ public class NQueensAllWays {
                 nQueen(board, row+1);//function cakk
                 board[row][j]='X';//backtraking step
             }
-           
         }
     }
     //for one solution 
@@ -64,10 +63,9 @@ public class NQueensAllWays {
             }
             System.out.println();
         }
-
     }
     public static void main(String[] args){
-        int n=4;
+        int n=5;
         char board[][]=new char[n][n];
         for(int i=0;i<board.length;i++){
             for(int j=0;j<board.length;j++){
