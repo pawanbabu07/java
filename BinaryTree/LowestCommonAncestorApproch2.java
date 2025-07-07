@@ -1,7 +1,6 @@
-package BinTree;
 
-public class SumOfNode{
 
+public class LowestCommonAncestorApproch2 {
     static class Node{
         int data;
         Node left, right;
@@ -11,19 +10,25 @@ public class SumOfNode{
             this.right = null;
             this.left = null;
         }
- 
     }
-
-    public static int sum(Node root){
-        if(root==null){
-            return 0;
+    public static Node lca(Node root, int n1, int n2){
+        if(root==null || root.data==n1 ||root.data==n2){
+            return root;
         }
-        int leftSum=sum(root.left);
-        int rightSum=sum(root.right);
-        return (leftSum+rightSum+root.data);
+        Node leftLca = lca(root.left, n1, n2);
+        Node rightLca = lca(root.right, n1, n2);
+
+        //leftLca ya rightLca = null
+        if(rightLca == null){
+            return leftLca;
+        }
+        if(leftLca == null){
+            return rightLca;
+        }
+        return  root;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
          /*
                      1
                     / \
@@ -42,7 +47,8 @@ public class SumOfNode{
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-    
-        System.out.println(sum(root));
+
+        int n1=4, n2=5;
+        System.out.println(lca(root, n1, n2).data);
     }
 }

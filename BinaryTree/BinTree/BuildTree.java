@@ -33,7 +33,6 @@ public class BuildTree {
         //print preorder tree(root print first)
         public static void preorder(Node root){
             if(root==null){
-                System.out.print("-1 ");
                 return;
             }
             System.out.print(root.data+" ");
@@ -100,11 +99,12 @@ public class BuildTree {
         BiTree tree = new BiTree();
         Node root = tree.bBuidTree(nodes);
         // System.out.println(root.data);
-        // tree.preorder(root);
-        // tree.inorder(root);
-        // System.out.println();
-        // tree.postordat(root);
-
-        tree.levelOrder(root);        
+        System.out.println();
+        tree.preorder(root);
+        System.out.println();
+        tree.inorder(root);
+        System.out.println();
+        tree.postordat(root);
+        //tree.levelOrder(root);        
     }
 }
