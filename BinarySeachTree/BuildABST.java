@@ -1,6 +1,8 @@
 
 package BinarySeachTree;
 
+import java.util.ArrayList;
+
 import javax.swing.plaf.basic.BasicBorders;
 
 class BuildABST {
@@ -102,18 +104,31 @@ class BuildABST {
         }
     }
 
+    public static void printRootToLeaf(Node root, ArrayList<Integer> path){
+        if(root == null){
+            return;
+        }
+        path.add(root.data);
+        if(root.left == null && root.right == null){
+            System.out.println(path);
+        }
+        printRootToLeaf(root.left, path);
+        printRootToLeaf(root.right, path);
+        path.remove(path.size()-1);
+    }
+
     public static void main(String[] args) {
         int [] a={5,1,3,4,2,7};
         Node root=null;
         for(int i=0; i<a.length; i++){
             root=insert(root, a[i]);
         }
-        inordet(root);
+        // inordet(root);
         // System.out.println(search(root, 9));
-        System.out.println();
+        // System.out.println();
         // root=delete(root, 7);
         // inordet(root);
-
-        printInRange(root, 9, 10);
+        // printInRange(root, 9, 10);
+        printRootToLeaf(root, new ArrayList<>());
     }
 }
