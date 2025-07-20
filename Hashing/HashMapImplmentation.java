@@ -1,5 +1,3 @@
-import com.sun.tools.javac.Main;
-import java.awt.event.KeyEvent;
 import java.util.LinkedList;
 
 public class HashMapImplmentation {
@@ -29,7 +27,7 @@ public class HashMapImplmentation {
         private int searchInLL(K key, int bi){
             LinkedList<Node> ll = buckets[bi];
             int di =0;
-            for(int i;i<ll.size();i++){
+            for(int i = 0;i<ll.size();i++){
                 Node node = ll.get(i);
                 if(node.key == key){
                     return di;

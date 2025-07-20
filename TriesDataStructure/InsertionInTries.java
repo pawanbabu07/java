@@ -45,6 +45,6 @@ public class InsertionInTries {
             insert(word[i]);
         }
 
-        System.out.println(search(""));
+        System.out.println(search("the"));
     }
 }

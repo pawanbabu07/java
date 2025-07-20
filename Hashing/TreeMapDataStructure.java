@@ -9,6 +9,7 @@ public class TreeMapDataStructure {
         tm.put("china", 150);
         tm.put("nepal", 20);
         tm.put("india", 100);
+        tm.put("itly", 30);
         
        
         System.out.println(tm);

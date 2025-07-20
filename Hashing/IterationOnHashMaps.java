@@ -12,6 +12,8 @@ public class IterationOnHashMaps {
         hm.put("China", 1000);
         hm.put("USA", 300);
 
+        System.out.println(hm);
+
         Set<String> st= hm.keySet();
         for (String key : st) {
             System.out.println("Key= "+key+"  value= "+hm.get(key));

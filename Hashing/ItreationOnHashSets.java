@@ -1,7 +1,7 @@
 package Hashing;
 
 import java.util.HashSet;
-import java.util.Iterator;
+
 
 public class ItreationOnHashSets {
     public static void main(String[] args) {
@@ -16,6 +16,7 @@ public class ItreationOnHashSets {
         // while(it.hasNext()){
         //     System.out.println(it.next());
         // }
+        System.out.println(cities);
 
         for(String city:cities){
             System.out.println(city);
