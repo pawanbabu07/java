@@ -112,7 +112,9 @@ public class ConnectedComponents {
         ArrayList<Edge> graph[] = new ArrayList[v];
         CreateGraph(graph);
 
-        System.out.println(hasPath(graph, 0, 5, new boolean[v]));
+        bfs(graph);
+        System.out.println();
+        dfs(graph);
         
     }
 }
