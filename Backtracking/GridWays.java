@@ -12,7 +12,7 @@ public class GridWays {
         return w1+w2;
     }
     public static void main(String[] args) {
-        int n=4,m=4;
+        int n=3,m=7;
         System.out.println(gridWays(0, 0, n, m));
     }
     
